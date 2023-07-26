@@ -34,22 +34,11 @@ function criaLista(){
     
 
     // LAÇO  DE REPETIÇAO  PARA COLOCAR NOMES NA TABELA
-    for(let i=0;i <= (dadosLista.length-1);i++){incluir/button>
-{
-
-}
-        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class='btn 
-        btn-success' onclick=''>Editar</button><button class='btn btn-danger'
-         onclick=''Excluir</button></td></tr>";
-        document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuario</th><th>Açoes</th></th>";
-    }
-    // LAÇO DE REPETIÇAO PARA COLOCAR NOMES NA TABELA
     for(let i=0;i <= (dadosLista.length-1);i++){
-        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class="btn btn-success' onclick=''>Editar</button><button class='btn-danger'
-        onclick=''>Excluir</button></td></tr>";
-        document.getElementById("tabela").innerHTML = tabela;
 
     }
+        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class='btn btn-success' onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</button><button class='btn btn-danger'"
+
 {
     // FUNÇAO PARA EDITAR NOME
     function Editar(i){
