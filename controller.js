@@ -23,18 +23,42 @@ function salvarUser(){
         }
         console.log(dadosLista);
     }
-}
+
 
 // FUNÇAO PARA CRIAÇAO DE LISTA NA TABELA
 
 
 function criaLista(){
     let tabela = document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuario</th>"
-
+}
+    
 
     // LAÇO  DE REPETIÇAO  PARA COLOCAR NOMES NA TABELA
-    for(let i=0;i <= (dadosLista.length-1);i++){Excluir</button>
+    for(let i=0;i <= (dadosLista.length-1);i++){incluir/button>
+{
+
+}
+        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class='btn 
+        btn-success' onclick=''>Editar</button><button class='btn btn-danger'
+         onclick=''Excluir</button></td></tr>";
+        document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuario</th><th>Açoes</th></th>";
     }
-        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class='btn btn-success' onclick=''>Editar</button><button class='btn btn-danger' onclick=''Excluir</button></td></tr>";
-        document.getElementById("tabela")
+    // LAÇO DE REPETIÇAO PARA COLOCAR NOMES NA TABELA
+    for(let i=0;i <= (dadosLista.length-1);i++){
+        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class="btn btn-success' onclick=''>Editar</button><button class='btn-danger'
+        onclick=''>Excluir</button></td></tr>";
+        document.getElementById("tabela").innerHTML = tabela;
+
+    }
+{
+    // FUNÇAO PARA EDITAR NOME
+    function Editar(i){
+        document.getElementById("nomeUser").value = dadosLista[(i - 1)];
+        dadosLista.splice(dadosLista[(i - 1)], 1)
+    }
+}
+// FUNÇAO PARA EXCLUIR NOME
+function excluir(i){
+    dadosLista.splice([i - 1], 1);
+    document.getElementById('tabela').deleteRow(i);
 }
